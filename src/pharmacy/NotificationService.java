@@ -2,7 +2,7 @@ package pharmacy.subsystem;
 
 import pharmacy.exception.PharmacyException;
 import pharmacy.model.Patient;
-
+/
 public class NotificationService {
 
     public void notifyReady(Patient patient, String orderId) {
