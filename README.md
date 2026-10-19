@@ -52,11 +52,3 @@ Why SMS doesn't cancel the order: A failed SMS shouldn't cancel a paid, packed o
 6. Type safety — PaymentMethod enum instead of strings, BigDecimal instead of double for money.
 7. Dependency Injection — subsystems are passed into the facade constructor.
 8. Encapsulation — getStockSnapshot returns an immutable copy.
-
-## How to Run
-Java 17 or newer is required.
-
-```bash
-javac -encoding UTF-8 -d out $(find src -name "*.java")
-java -cp out pharmacy.Main
-```
