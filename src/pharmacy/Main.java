@@ -16,7 +16,7 @@ public class Main {
         PharmacyAdminFacade admin = pharmacy.admin();
 
         Patient ivan = new Patient("P1", "Ivan", "+77001234567");
-        Patient aigerim = new Patient("P2", "Aigerim", null);
+        Patient luka = new Patient("P2", "luka", null);
 
         section("1. Successful order");
         show(orders.processPrescription(
@@ -38,7 +38,7 @@ public class Main {
 
         section("5. No phone -> order is still issued, SMS is not critical");
         show(orders.processPrescription(
-                new Prescription("R5", aigerim, "Amoxicillin", 3, "LIC-777"), PaymentMethod.QR));
+                new Prescription("R5", luka, "Amoxicillin", 3, "LIC-777"), PaymentMethod.QR));
 
         section("6. Admin facade: report and restock (shared inventory)");
         System.out.println("Low stock (<40): " + admin.lowStockReport(40));
